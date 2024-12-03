@@ -131,15 +131,24 @@ btn.addEventListener('click', e => {
         btn.style.background= '#880015' ? '#FF2B2B' : '#880015'; // Thay đổi màu nền
     }, 100);
     const flag = job.getAttribute('flag')
+    let tmp = outData()
+    console.log(tmp)
+    let thu = 1
+    for(let i = 0; i < tmp.length; i++){
+        if(job.value == tmp[i].name){
+            thu = 0
+        }
+    }
     if(job.value == ''){
         document.querySelector('.tt').innerHTML = 'Nhập lại!(Phải nhập công việc)'
         document.querySelector('.tt').style.color = 'red'
         document.querySelector('.tt').style.marginTop = '5px'
-
     }
-    // else if(){
-
-    // }
+    else if(thu == 0){
+        document.querySelector('.tt').innerHTML = 'Nhập lại!(Công việc đã tồn tại)'
+        document.querySelector('.tt').style.color = 'red'
+        document.querySelector('.tt').style.marginTop = '5px'
+    }
     else if(flag != '-1'){
         document.querySelector('.tt').innerHTML = ''
         let x = outData()
