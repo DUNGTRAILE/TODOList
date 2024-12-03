@@ -137,6 +137,9 @@ btn.addEventListener('click', e => {
         document.querySelector('.tt').style.marginTop = '5px'
 
     }
+    // else if(){
+
+    // }
     else if(flag != '-1'){
         document.querySelector('.tt').innerHTML = ''
         let x = outData()
