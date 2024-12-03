@@ -33,6 +33,9 @@ if(JSON.parse(localStorage.getItem('list')) != null) {
     list = JSON.parse(localStorage.getItem('list'))
     tmp = JSON.parse(localStorage.getItem('list'))
 }
+else{
+    localStorage.setItem('list',JSON.stringify(list))
+}
 //in dữ liệu ban đầu
 const print = (data) => {
     let count = 0
